@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Anthem</title>
+    <link rel="stylesheet" href="styles.css"> <!-- your existing CSS -->
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand">
+    <img src="images/badge.png" class="logo-img">
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="directors.html">Directors</a>
+        <a href="anthem.html">School Anthem</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a>Academics</a>
+      <div class="dropdown-content">
+        <a href="senior1.html">Senior one</a>
+        <a href="senior2.html">Senior two</a>
+        <a href="senior3.html">Senior three</a>
+        <a href="senior4.html">Senior four</a>
+        <a href="senior5.html">Senior five</a>
+        <a href="senior6.html">Senior six</a>
+      </div>
+    </div>
+
+    <a href="find_us.html">Find us</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</nav>
+<!-- HERO SECTION -->
+<section class="hero" style="min-height: 400px;">
+    <div class="hero-content">
+        <h1 class="hero-title">School Anthem</h1>
+        <p class="hero-motto">Shine, Shine</p>
+    </div>
+</section>
+
+<!-- ANTHEM CONTENT -->
+<section class="history-section">
+    <div class="grid-container">
+
+        <!-- TEXT SIDE -->
+        <div class="history-content">
+            <h2>Our Anthem</h2>
+
+            <div class="accent-box">
+    <p class="italic" style="line-height: 2;">
+
+        Let us all build a good morals<br>
+        In Namiryango High, the school of achievers<br><br>
+
+        With discipline and hard working,<br>
+        With all the efforts,<br>
+        Success will always be our goal.<br><br>
+
+        <strong>Shine, shine Namiryango High School</strong><br><br>
+
+
+        Let us all build a good morals,<br>
+        With our God everything is possible<br>
+        Through treasuring our lives<br>
+        And everybody,<br>
+        We shall become great people.<br><br>
+
+        <strong>Shine, shine Namiryango High School</strong><br><br>
+
+
+        Let us all build a good morals,<br>
+        With our parents and all our teachers,<br>
+        We are the leaders of tomorrow,<br>
+        Let us always love school and nation.<br><br>
+
+        <strong>Shine, shine Namiryango High School</strong><br><br>
+
+        <span style="display:block; margin-top:20px; font-size:0.9rem; color:var(--text-muted);">
+            Composed by Musisi John Baptist
+        </span>
+
+    </p>
+</div>
+        </div>
+
+        <!-- IMAGE SIDE -->
+        <div class="history-image">
+            <img src="images/drone.jpeg" alt="School Image">
+        </div>
+
+    </div>
+
+    <!-- OPTIONAL AUDIO -->
+    <div class="anthem-player">
+    <h3 class="sans uppercase">Listen to the Anthem</h3>
+
+    <div class="player-box">
+        <button id="playBtn">▶</button>
+        <span id="status">Play Anthem</span>
+    </div>
+
+    <audio id="anthemAudio">
+        <source src="audio/namilyango_anthem.mp3" type="audio/mpeg">
+    </audio>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-wrap">
+<div class="footer-brand">
+<h4>Namiryango High School</h4>
+<p>"Let us build good Morals"</p>
+<img alt="NHS Badge" src="images/badge.png" style="height: 80px; margin-top: 1.5rem; display: block;"/>
+</div>
+<div class="footer-links">
+<div class="link-col">
+
+<div class="link-col">
+
+</div>
+</div>
+</div>
+<p class="copyright">© 2024 NAMIRYANGO HIGH SCHOOL. All rights reserved.</p>
+</footer>
+</body>
+</html>
+<script>
+const audio = document.getElementById("anthemAudio");
+const btn = document.getElementById("playBtn");
+const status = document.getElementById("status");
+
+btn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        btn.textContent = "❚❚";
+        status.textContent = "Playing...";
+    } else {
+        audio.pause();
+        btn.textContent = "▶";
+        status.textContent = "Play Anthem";
+    }
+});
+</script>

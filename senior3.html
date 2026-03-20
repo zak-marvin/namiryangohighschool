@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Results - 10 Subjects</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.results-section {
+  padding: 8rem 5%;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-family: var(--font-sans);
+}
+
+.results-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.results-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.results-table tr:hover {
+  background: var(--surface-container-low);
+}
+
+.student-name {
+  text-align: left;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+   <nav>
+  <div class="nav-brand">
+    <img src="images/badge.png" class="logo-img">
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="directors.html">Directors</a>
+        <a href="anthem.html">School Anthem</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a>Academics</a>
+      <div class="dropdown-content">
+        <a href="senior1.html">Senior one</a>
+        <a href="senior2.html">Senior two</a>
+        <a href="senior3.html">Senior three</a>
+        <a href="senior4.html">Senior four</a>
+        <a href="senior5.html">Senior five</a>
+        <a href="senior6.html">Senior six</a>
+      </div>
+    </div>
+
+    <a href="find_us.html">Find us</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</nav>
+
+
+
+<section class="results-section">
+  <h3 class="class-heading-center">S3 – Term Results</h3>
+  <h2>Term Results (10 Subjects)</h2>
+
+  <table class="results-table">
+    <tr>
+      <th>Name</th>
+      <th>Math</th><th>Eng</th><th>Bio</th><th>Chem</th><th>Phy</th>
+      <th>Hist</th><th>Geo</th><th>CRE</th><th>ICT</th><th>Lit</th>
+      <th>Total</th><th>Avg</th>
+    </tr>
+
+    <tr>
+      <td class="student-name">John Doe</td>
+      <td>80</td><td>75</td><td>70</td><td>68</td><td>72</td>
+      <td>65</td><td>60</td><td>78</td><td>82</td><td>74</td>
+      <td>724</td><td>72.4</td>
+    </tr>
+     <tr>
+      <td class="student-name">Kevi Durant</td>
+      <td>80</td><td>75</td><td>70</td><td>68</td><td>72</td>
+      <td>65</td><td>60</td><td>78</td><td>82</td><td>74</td>
+      <td>724</td><td>72.4</td>
+    </tr>
+    <tr>
+      <td class="student-name">Steven James</td>
+      <td>80</td><td>75</td><td>70</td><td>68</td><td>72</td>
+      <td>65</td><td>60</td><td>78</td><td>82</td><td>74</td>
+      <td>724</td><td>72.4</td>
+    </tr>
+  </table>
+</section>
+
+</body>
+</html>
