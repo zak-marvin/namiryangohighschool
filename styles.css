@@ -774,7 +774,7 @@ section {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            .nav-links { display: none; }
+            
             .history-section { padding: 5rem 5%; }
             .feature-card { border-right: none; border-bottom: 1px solid var(--border); }
             .footer-links { flex-direction: column; gap: 2rem; }
