@@ -902,6 +902,11 @@ section {
       flex-direction: column; 
       gap: 2rem; 
     }
+    .slide img {
+            width: 100%;
+            display: none;
+            object-fit: cover;
+        }
 
     .hero-crest-badge { 
       width: 120px; 
