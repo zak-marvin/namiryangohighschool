@@ -156,22 +156,21 @@ section {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 20s linear infinite;
 }
 
 .marquee-track img {
   height: 120px;
   width: auto;
   border-radius: 10px;
-
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 /* Hover effect */
 .marquee-track img:hover {
   transform: scale(1.1);
 }
+
 
 /* Animation */
 @keyframes scrollLeft {
