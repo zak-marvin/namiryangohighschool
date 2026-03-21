@@ -258,6 +258,8 @@ section {
   border: 0;
 }
 
+
+
         * {
             margin: 0;
             padding: 0;
@@ -772,88 +774,136 @@ section {
         @media (max-width: 900px) {
 
   /* NAV FIX ONLY */
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.8rem 5%;
-    gap: 10px;
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.8rem 5%;
+      gap: 10px;
+    }
+
+    .nav-brand {
+      width: 100%;
+    }
+
+    .logo-img {
+      height: 45px;
+    }
+
+    .school-name-nav {
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      width: 100%;
+      flex-wrap: wrap; /* ✅ prevents overflow */
+      gap: 8px;
+      margin-top: 5px;
+    }
+
+    .nav-links a,
+    .dropdown > a {
+      font-size: 0.7rem;
+      padding: 8px 10px;
+    }
+
+    /* DROPDOWN MOBILE FIX */
+    .dropdown {
+      width: 100%;
+    }
+
+    .dropdown-content {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+
+      visibility: visible;
+      transform: none;
+  display: none;
+      margin-top: 5px;
+    }
+
+    .dropdown:active .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
   }
 
-  .nav-brand {
-    width: 100%;
-  }
+    .dropdown-content a {
+      padding: 10px;
+      font-size: 0.8rem;
+    }
 
-  .logo-img {
-    height: 45px;
-  }
+    /* KEEP YOUR ORIGINAL MOBILE LAYOUT */
+    .grid-container,
+    .features-grid,
+    .split-form,
+    .footer-wrap {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
 
-  .school-name-nav {
-    font-size: 0.9rem;
+    .history-section { 
+      padding: 5rem 5%; 
+    }
+
+    .feature-card { 
+      border-right: none; 
+      border-bottom: 1px solid var(--border); 
+    }
+/* HAMBURGER BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* MOBILE NAV */
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
   }
 
   .nav-links {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    flex-wrap: wrap; /* ✅ prevents overflow */
-    gap: 8px;
-    margin-top: 5px;
+    background: white;
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+    padding: 10px 0;
   }
 
-  .nav-links a,
-  .dropdown > a {
-    font-size: 0.7rem;
-    padding: 8px 10px;
+  .nav-links.active {
+    display: flex;
   }
-
-  /* DROPDOWN MOBILE FIX */
-  .dropdown {
+.nav-links.active {
+  display: flex;
+}
+  .nav-links a {
     width: 100%;
+    padding: 12px 20px;
   }
 
   .dropdown-content {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-
-    visibility: visible;
-    transform: none;
-display: none;
-    margin-top: 5px;
+    display: none;
   }
 
-  .dropdown:active .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: block;
-}
-
-  .dropdown-content a {
-    padding: 10px;
-    font-size: 0.8rem;
-  }
-
-  /* KEEP YOUR ORIGINAL MOBILE LAYOUT */
-  .grid-container,
-  .features-grid,
-  .split-form,
-  .footer-wrap {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .history-section { 
-    padding: 5rem 5%; 
-  }
-
-  .feature-card { 
-    border-right: none; 
-    border-bottom: 1px solid var(--border); 
-  }
-
-  .footer-links { 
-    flex-direction: column; 
-    gap: 2rem; 
-  }
-
-  .hero-crest-badge { 
-    width: 120px; 
+  .dropdown.active .dropdown-content {
+    display: block;
   }
 }
+    .footer-links { 
+      flex-direction: column; 
+      gap: 2rem; 
+    }
+
+    .hero-crest-badge { 
+      width: 120px; 
+    }
+  }

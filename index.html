@@ -64,14 +64,20 @@ school of achievers
 <title>NAMIRYANGO HIGH SCHOOL | Let us build good Morals</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
 <nav>
   <div class="nav-brand">
     <img src="images/badge.png" class="logo-img">
     <span class="school-name-nav">Namiryango High School</span>
   </div>
 
-  <div class="nav-links">
+  <!-- Hamburger Button (ONLY ONE, INSIDE NAV) -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- Navigation Links -->
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
 
     <div class="dropdown">
@@ -99,6 +105,9 @@ school of achievers
     <a href="gallery.html">Gallery</a>
   </div>
 </nav>
+
+
+
 <main>
 <!-- Hero Slideshow -->
 <section class="hero">
@@ -238,4 +247,20 @@ school of achievers
 </div>
 <p class="copyright">© 2024 NAMIRYANGO HIGH SCHOOL. All rights reserved.</p>
 </footer>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", () => {
+      drop.classList.toggle("active");
+    });
+  });
+</script>
 </body></html>

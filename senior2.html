@@ -52,7 +52,11 @@
     <span class="school-name-nav">Namiryango High School</span>
   </div>
 
-  <div class="nav-links">
+  <!-- Hamburger Button (ONLY ONE, INSIDE NAV) -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- Navigation Links -->
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
 
     <div class="dropdown">
@@ -120,6 +124,21 @@
     </table>
   </div>
 </section>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", () => {
+      drop.classList.toggle("active");
+    });
+  });
+</script>
 </body>
 </html>
