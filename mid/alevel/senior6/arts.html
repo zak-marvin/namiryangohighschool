@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Senior 6 Arts Results | Namiryango High School</title>
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+.results-section {
+  padding: 8rem 5%;
+}
+
+.search-box {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.search-box input {
+  width: 300px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 1000px;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+}
+
+.results-table th {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.results-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.results-table tr:hover {
+  background: var(--surface-container-low);
+}
+
+.student-name {
+  font-weight: bold;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <img src="../../../images/badge.png" class="logo-img"/>
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../../../index.html">Home</a>
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="../../../history.html">History</a>
+        <a href="../../../directors.html">Directors</a>
+        <a href="../../../anthem.html">School Anthem</a>
+      </div>
+    </div>
+    <a href="../../../assesment.html">Assessment</a>
+    <a href="../../../find_us.html">Find us</a>
+    <a href="../../../gallery.html">Gallery</a>
+  </div>
+</nav>
+
+<section class="results-section">
+  <h3 class="class-heading-center">Senior 6 Arts – Term Results</h3>
+  <h2>Full Subject Results (Principal Subjects Only)</h2>
+
+  <div class="search-box">
+    <input type="text" id="studentSearch" onkeyup="searchStudent()" placeholder="Search for your name...">
+  </div>
+
+  <div class="table-container">
+    <table class="results-table" id="resultsTable">
+      <tr>
+        <th>Name</th>
+        <th>History</th>
+        <th>Geography</th>
+        <th>Economics</th>
+        <th>CRE</th>
+        <th>Art</th>
+        <th>Music</th>
+      </tr>
+
+      <!-- 15 students: exactly 3 subjects per student -->
+      <tr><td class="student-name">Okello James</td><td>78</td><td>82</td><td>75</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr><td class="student-name">Nabukenya Faith</td><td>-</td><td>79</td><td>72</td><td>68</td><td>-</td><td>-</td></tr>
+      <tr><td class="student-name">Ssemanda Peter</td><td>76</td><td>-</td><td>70</td><td>69</td><td>-</td><td>73</td></tr>
+      <tr><td class="student-name">Kato Ruth</td><td>-</td><td>-</td><td>74</td><td>70</td><td>82</td><td>-</td></tr>
+      <tr><td class="student-name">Lugudde Michael</td><td>79</td><td>75</td><td>-</td><td>-</td><td>-</td><td>77</td></tr>
+      <tr><td class="student-name">Namanya Sarah</td><td>-</td><td>-</td><td>72</td><td>70</td><td>78</td><td>-</td></tr>
+      <tr><td class="student-name">Mukasa Brian</td><td>74</td><td>-</td><td>-</td><td>-</td><td>76</td><td>72</td></tr>
+      <tr><td class="student-name">Tumuheki Esther</td><td>80</td><td>-</td><td>73</td><td>-</td><td>-</td><td>75</td></tr>
+      <tr><td class="student-name">Byaruhanga David</td><td>-</td><td>78</td><td>71</td><td>69</td><td>-</td><td>-</td></tr>
+      <tr><td class="student-name">Nakato Joy</td><td>82</td><td>-</td><td>-</td><td>-</td><td>70</td><td>-</td></tr>
+      <tr><td class="student-name">Kiggundu Kevin</td><td>-</td><td>76</td><td>-</td><td>68</td><td>77</td><td>-</td></tr>
+      <tr><td class="student-name">Namirembe Grace</td><td>79</td><td>-</td><td>-</td><td>-</td><td>74</td><td>70</td></tr>
+      <tr><td class="student-name">Otim John</td><td>-</td><td>-</td><td>75</td><td>71</td><td>78</td><td>-</td></tr>
+      <tr><td class="student-name">Sanyu Alex</td><td>81</td><td>-</td><td>-</td><td>-</td><td>76</td><td>72</td></tr>
+      <tr><td class="student-name">Mugisha Linda</td><td>-</td><td>79</td><td>72</td><td>-</td><td>75</td><td>-</td></tr>
+    </table>
+  </div>
+</section>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => { navLinks.classList.toggle("active"); });
+document.querySelectorAll(".dropdown").forEach(drop => { drop.addEventListener("click", () => drop.classList.toggle("active")); });
+
+function searchStudent() {
+  const input = document.getElementById("studentSearch");
+  const filter = input.value.toUpperCase();
+  const table = document.getElementById("resultsTable");
+  const tr = table.getElementsByTagName("tr");
+
+  for (let i = 1; i < tr.length; i++) {
+    const td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      const txtValue = td.textContent || td.innerText;
+      tr[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

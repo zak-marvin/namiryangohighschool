@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Student Results - S2 | Namiryango High School</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.results-section {
+  padding: 8rem 5%;
+}
+
+.search-box {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.search-box input {
+  width: 300px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 1200px;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+}
+
+.results-table th {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.results-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.results-table tr:hover {
+  background: var(--surface-container-low);
+}
+
+.student-name {
+  font-weight: bold;
+  text-align: left;
+}
+</style>
+</head>
+
+<body>
+<nav>
+  <div class="nav-brand">
+    <img src="../images/badge.png" class="logo-img"/>
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">Home</a>
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="../history.html">History</a>
+        <a href="../directors.html">Directors</a>
+        <a href="../anthem.html">School Anthem</a>
+      </div>
+    </div>
+    <a href="../assesment.html">Assesment</a>
+    
+    <a href="../find_us.html">Find us</a>
+    <a href="../Co-curricular.html">Co-curricular</a>
+  </div>
+</nav>
+
+<section class="results-section">
+  <h3 class="class-heading-center">S1 – Term Results</h3>
+  <h2>Full Subject Results (16 Subjects)</h2>
+
+  <div class="search-box">
+    <input type="text" id="studentSearch" onkeyup="searchStudent()" placeholder="Search for your name...">
+  </div>
+
+  <div class="table-container">
+    <table class="results-table" id="resultsTable">
+      <tr>
+        <th>Name</th>
+        <th>MTC</th><th>ENG</th><th>BIO</th><th>CHE</th><th>PHY</th>
+        <th>HIS</th><th>GEO</th><th>CRE</th><th>ICT</th>
+        <th>ENT</th><th>AGR</th><th>ART</th><th>MUS</th><th>PE</th><th>FRE</th><th>GER</th>
+      </tr>
+
+      <!-- 30 Students -->
+      <tr><td class="student-name">Okello James</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td></tr>
+      <tr><td class="student-name">Nabukenya Faith</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Ssemanda Peter</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Kato Ruth</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Lugudde Michael</td><td>B</td><td>B</td><td>B</td><td>B</td><td>A</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>A</td><td>B</td><td>B</td><td>C</td><td>B</td><td>A</td></tr>
+      <tr><td class="student-name">Namanya Sarah</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Mukasa Brian</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Tumuheki Esther</td><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Byaruhanga David</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Nakato Joy</td><td>A</td><td>B</td><td>B</td><td>A</td><td>C</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Kiggundu Kevin</td><td>B</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Namirembe Grace</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Otim John</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Sanyu Alex</td><td>B</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Mugisha Linda</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Kakande Paul</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Namukasa Helen</td><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Lubega Martin</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Namutebi Alice</td><td>A</td><td>B</td><td>B</td><td>A</td><td>C</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Bagonza Robert</td><td>B</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Nansubuga Jane</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Lule Michael</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Namazzi Sandra</td><td>B</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Sekajja Simon</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Kafeero Samuel</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td></tr>
+      <tr><td class="student-name">Ntambi Irene</td><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+      <tr><td class="student-name">Muwanga Patrick</td><td>B</td><td>C</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td></tr>
+      <tr><td class="student-name">Nabisere Christine</td><td>A</td><td>B</td><td>B</td><td>A</td><td>C</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>
+    </table>
+  </div>
+</section>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+const dropdowns = document.querySelectorAll(".dropdown");
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", () => {
+    drop.classList.toggle("active");
+  });
+});
+
+/* SEARCH FUNCTION */
+function searchStudent() {
+  const input = document.getElementById("studentSearch");
+  const filter = input.value.toUpperCase();
+  const table = document.getElementById("resultsTable");
+  const tr = table.getElementsByTagName("tr");
+
+  for (let i = 1; i < tr.length; i++) { // skip header row
+    const td = tr[i].getElementsByTagName("td")[0]; // student name column
+    if (td) {
+      const txtValue = td.textContent || td.innerText;
+      tr[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

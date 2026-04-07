@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Beginning of Term Results | Namiryango High School</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Term Page Styles */
+.term-section {
+  padding: 6rem 5%;
+  text-align: center;
+}
+
+.term-section h2 {
+  font-family: var(--font-serif);
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.term-section h2::before,
+.term-section h2::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.class-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.class-btn {
+  background: var(--primary);
+  color: white;
+  padding: 1.8rem 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.class-btn:hover {
+  background: var(--accent);
+  color: var(--text-main);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(75, 42, 133, 0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR (same as index.html) -->
+<nav>
+  <div class="nav-brand">
+    <img src="images/badge.png" class="logo-img">
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="directors.html">Directors</a>
+        <a href="anthem.html">School Anthem</a>
+      </div>
+    </div>
+    <a href="assesment.html">Assesment</a>
+    <a href="find_us.html">Find us</a>
+    <a href="Co-curricular.html">Co-curricular</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+<section class="term-section">
+  <h2>End of Term - Select Class</h2>
+  <div class="class-buttons">
+    <button class="class-btn" onclick="window.location.href='end/senior1.html'">Senior 1</button>
+    <button class="class-btn" onclick="window.location.href='end/senior2.html'">Senior 2</button>
+    <button class="class-btn" onclick="window.location.href='end/senior3.html'">Senior 3</button>
+    <button class="class-btn" onclick="window.location.href='end/senior4.html'">Senior 4</button>
+    <button class="class-btn" onclick="window.location.href='end/senior5.html'">Senior 5</button>
+    <button class="class-btn" onclick="window.location.href='end/senior6.html'">Senior 6</button>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <h4>Namiryango High School</h4>
+      <p>"Let us build good Morals"</p>
+      <img src="images/badge.png" style="height: 80px; margin-top: 1.5rem; display: block;"/>
+    </div>
+  </div>
+  <p class="copyright">© 2024 NAMIRYANGO HIGH SCHOOL. All rights reserved.</p>
+</footer>
+
+<script>
+/* MOBILE MENU TOGGLE */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+/* DROPDOWN FUNCTIONALITY */
+const dropdowns = document.querySelectorAll(".dropdown");
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", () => {
+    drop.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>

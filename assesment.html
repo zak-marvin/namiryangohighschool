@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Namiryango High School - Academic Results</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Grades Menu Styles */
+.grades-section {
+  padding: 6rem 5%;
+  text-align: center;
+}
+
+.grades-section h2 {
+  font-family: var(--font-serif);
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.grades-section h2::before,
+.grades-section h2::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.grades-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.grade-btn {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 3rem;
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+.grade-btn:hover {
+  background: var(--accent);
+  color: var(--text-main);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(75, 42, 133, 0.3);
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <img src="images/badge.png" class="logo-img">
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="directors.html">Directors</a>
+        <a href="anthem.html">School Anthem</a>
+      </div>
+    </div>
+    <a href="assesment.html">Assesment</a>
+    <a href="find_us.html">Find us</a>
+    <a href="Co-curricular.html">Co-curricular</a>
+  </div>
+</nav>
+
+<main>
+<section class="grades-section">
+  <h2>Academic Results</h2>
+  <div class="grades-buttons">
+    <button class="grade-btn" onclick="window.location.href='beginning.html'">Beginning of Term</button>
+    <button class="grade-btn" onclick="window.location.href='mid.html'">Mid Term</button>
+    <button class="grade-btn" onclick="window.location.href='end.html'">End of Term</button>
+  </div>
+</section>
+</main>
+
+<footer>
+<div class="footer-wrap">
+<div class="footer-brand">
+<h4>Namiryango High School</h4>
+<p>"Let us build good Morals"</p>
+<img alt="NHS Badge" src="images/badge.png" style="height: 80px; margin-top: 1.5rem; display: block;"/>
+</div>
+<div class="footer-links">
+<div class="link-col">
+
+<div class="link-col">
+
+</div>
+</div>
+</div>
+<p class="copyright">© 2024 NAMIRYANGO HIGH SCHOOL. All rights reserved.</p>
+<p class="copyright">© Designed by Kasule Ian 07652011756</p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", () => {
+      drop.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>

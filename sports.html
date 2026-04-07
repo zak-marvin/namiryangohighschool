@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports - Namiryango High School</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand">
+    <img src="../images/badge.png" class="logo-img">
+    <span class="school-name-nav">Namiryango High School</span>
+  </div>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">Home</a>
+
+    <div class="dropdown">
+      <a>About Us</a>
+      <div class="dropdown-content">
+        <a href="../history.html">History</a>
+        <a href="../directors.html">Directors</a>
+        <a href="../anthem.html">School Anthem</a>
+      </div>
+    </div>
+
+    <a href="assesment.html">Assesment</a>
+
+    <a href="../find_us.html">Find us</a>
+    <a href="../Co-curricular.html">Co-curricular</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="min-height: 350px;">
+  <div class="hero-content">
+    <h1 class="hero-title" style="padding-top: 200px;">Sports</h1>
+    <p class="hero-motto">Talent, Strength & Teamwork</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+
+  <h2 class="class-heading-center">Sports Activities</h2>
+
+  <div class="gallery-grid">
+
+    <img src="sports/sports1.jpg" alt="">
+    
+    <img src="sports/sports3.jpg" alt="">
+    <img src="sports/sports4.jpg" alt="">
+    <img src="sports/sports5.jpg" alt="">
+    <img src="sports/sports6.jpg" alt="">
+    <img src="sports/sports7.jpg" alt="">
+    <img src="sports/sports8.jpg" alt="">
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <h4>Namiryango High School</h4>
+      <p>"Let us build good Morals"</p>
+      <img src="../images/badge.png" style="height: 80px; margin-top: 1.5rem;">
+    </div>
+  </div>
+
+  <p class="copyright">© 2026 NAMIRYANGO HIGH SCHOOL. All rights reserved.</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+const dropdowns = document.querySelectorAll(".dropdown");
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", () => {
+    drop.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
